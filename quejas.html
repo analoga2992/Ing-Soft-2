@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Quejas</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	
+	<div class="container">
+		<h1 class="text-center">Formulario de interposición de quejas</h1>
+		<h5 class="text-center">Objetivo: recopilar información sobre la calidad del servicio respecto a la atención recibida en alguna de las contralorías del territorio nacional.</h5>
+		<h5 class="text-center">La información que proporcione se tratará con absoluta confidencialidad para los fines exclusivos que han sido descritos.</h5>
+		<h5 class="text-center">- Ley 8968 de Protección de la Persona frente al tratamiento de sus datos personales -</h5>
+		<form class="col-sm-6 col-sm-offset-3" action="reclamacion.php" method="POST">			
+		<hr width=100%>
+	<div class="form-group">
+      <label for="contr">Seleccione la dependencia donde recibió el servicio: </label>
+      <select name="contralorias" id="contr">
+        <option value="AyA">Acueductos y Alcantarillados</option>
+        <option value="ICE">Instituto Costarricense de Electricidad</option>
+        <option value="MEP">Ministerio de Educación</option>
+        <option value="MTSS">Ministerio de Trabajo</option>
+        <option value="PJ">Poder Judicial</option>
+        <option value="PL">Poder Legislativo</option>
+      </select>
+	</div>
+
+			<div class="form-group">
+				<label>Nombre del funcionario o funcionaria quien le atendió: </label>
+				<input type="text" class="form-control">
+			</div>
+
+<fieldset>
+    <label>Seleccione su inconformidad:</label>
+
+    <div>
+      <input type="radio" name="queja" value="qj_tipo1">
+      <label>Cubículos Vacíos</label>
+    </div>
+
+    <div>
+      <input type="radio" name="queja" value="qj_tipo2">
+      <label>Largos Tiempos de Espera</label>
+    </div>
+
+    <div>
+      <input type="radio" name="queja" value="qj_tipo3">
+      <label>Mala Atención</label>
+    </div>
+
+    <div>
+      <input type="radio" name="queja" value="qj_tipo4">
+      <label>Mala Preparación del Personal</label>
+    </div>
+
+    <div id="div1"><input class="rd" type="radio" name="queja" id="radio-1" value="qj_tipo5" checked=false /><input type="text" class="tb" name="tb1" value="" placeholder="Otra (especifique)" /></div>
+    <hr width=100%>
+
+   
+</fieldset>
+
+			<div class="form-group">
+				<label>OPCIÓN 1. Comente la situación por escrito.</label>
+				<textarea class="form-control" rows="4"></textarea>
+			</div>
+
+			<div class="form-group">
+				<label>OPCIÓN 2. Grabe un audio con la situación.</label>
+			<div>
+				<audio id="recording" width="160" height="120" controls></audio>
+				<hr width=100%>
+			</div>
+				<div class="audio-record">
+  				<button id="recordButton">Iniciar Grabación</button>
+  				<button id="stopButton" class="inactive">Detener Grabación</button>
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Enviar</button>
+			<button type="button" class="btn btn-danger">Salir</button>
+		</form>
+		<p>&nbsp;</p>
+	</div>
+</body>
+</html>
